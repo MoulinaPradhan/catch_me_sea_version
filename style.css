@@ -1,0 +1,193 @@
+body {
+  margin: 0px;
+  display: flex;
+  background-color: rgb(8, 0, 63);
+  background-image: url("https://i.ytimg.com/vi/fkKG1kRjJkE/maxresdefault.jpg");
+}
+h1 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 150px;
+  margin: auto;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 27%;
+  z-index: 2;
+  text-shadow: -10px 6px 3px rgb(182, 112, 112)50, 153, 153);
+  -webkit-box-reflect: below -11px -webkit-gradient(
+      linear,
+      right top,
+      right bottom,
+      from(transparent),
+      to(rgba(255, 255, 255, 0.4))
+    );
+}
+#star {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  box-shadow: -8px 6px 5px 3px black;
+  margin-left: -10px;
+}
+
+#box {
+  height: 150px;
+  width: 150px;
+
+  border-radius: 50%;
+
+  position: absolute;
+}
+#shadow {
+  border-radius: 50%;
+  background-color: black;
+  height: 5px;
+  width: 50px;
+  box-shadow: 2px -7px 6px 10px black;
+}
+img {
+  height: 75px;
+  width: 75px;
+}
+#tortoise {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 85%;
+  top: 80%;
+  transform: rotate(180deg);
+
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+  0% {
+    transfrom: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+#fish {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
+
+  animation: lineary 3s ease-in-out infinite alternate;
+}
+#fish2 {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 20%;
+  top: 60%;
+
+  animation: lineary 15s ease-in-out infinite alternate;
+}
+#fish3 {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 10%;
+  animation: lineary 5s ease-in-out infinite alternate;
+}
+#fish5 {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  left: 90%;
+  top: 40%;
+  animation: opposite 13s ease-in-out infinite alternate;
+}
+#fish4 {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 17%;
+  transform: translateY(10px);
+  animation: opposite 13s ease-in-out infinite alternate;
+}
+#fish6 {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 60%;
+  top: 20%;
+  animation: opposite 17s ease-in-out infinite alternate;
+}
+#fish7 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  animation: lineary 15s ease-in-out infinite alternate;
+}
+#crab {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  animation: rotating 15s ease-in-out infinite alternate;
+}
+@keyframes lineary {
+  0% {
+    transfrom: translateX(0px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes opposite {
+  0% {
+    transfrom: translateX(0px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(-900px);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transfrom: rotate(0deg);
+  }
+  25% {
+    transfrom: rotate(45deg);
+  }
+
+  75% {
+    transfrom: rotate(180deg);
+  }
+  85% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    background-color: darkblue;
+    background-repeat: no-repeat;
+    background-image: url("https://i.ytimg.com/vi/fkKG1kRjJkE/maxresdefault.jpg");
+    background-size: cover;
+  }
+}
