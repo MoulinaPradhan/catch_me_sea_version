@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Catch me if you can</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.flaticon.com/premium-icon/icons/svg/2931/2931496.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <h1 class="animate__animated animate__fadeOutDown animate__delay-2s">
+      Catch Me If Y<img
+        id="star"
+        src="https://www.flaticon.com/premium-icon/icons/svg/3151/3151079.svg"
+      />u Can
+    </h1>
+
+    <div id="box">
+      <img src="https://image.flaticon.com/icons/png/512/2977/2977327.png" />
+      <div id="shadow"></div>
+    </div>
+    <img
+      id="tortoise"
+      src="https://image.flaticon.com/icons/png/512/2977/2977402.png"
+    />
+    <img src="https://image.flaticon.com/icons/svg/875/875011.svg" id="fish" />
+    <img
+      id="fish2"
+      src="https://image.flaticon.com/icons/png/512/2918/2918878.png"
+    />
+    <img
+      src="https://image.flaticon.com/icons/svg/2990/2990525.svg"
+      id="fish3"
+    />
+    <img
+      src="https://image.flaticon.com/icons/svg/3142/3142419.svg"
+      id="fish4"
+    />
+    <img
+      src="https://image.flaticon.com/icons/svg/3142/3142416.svg"
+      id="fish5"
+    />
+
+    <img
+      src="https://www.flaticon.com/premium-icon/icons/svg/2931/2931496.svg"
+      id="crab"
+    />
+    <script>
+      var box = document.getElementById("box");
+
+      var viewWidth = window.innerWidth;
+      var viewHeight = window.innerHeight;
+      window.addEventListener("resize", function (event) {
+        viewWidth = window.innerWidth;
+        viewHeight = window.innerHeight;
+      });
+
+      box.addEventListener("mouseover", function (event) {
+        var boxAttr = box.getBoundingClientRect();
+
+        var pos = getNewPosition(boxAttr.width, boxAttr.height);
+
+        box.style.top = pos.y + "px";
+        box.style.left = pos.x + "px";
+      });
+
+      function getNewPosition(boxWidth, boxHeight) {
+        var newX = Math.floor(Math.random() * viewWidth + 1 - boxWidth);
+        var newY = Math.floor(Math.random() * viewHeight + 1 - boxHeight);
+
+        if (newX < 0) {
+          newX = 0;
+        }
+        if (newY < 0) {
+          newY = 0;
+        }
+
+        return { x: newX, y: newY };
+      }
+    </script>
+  </body>
+</html>
